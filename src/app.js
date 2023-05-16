@@ -19,7 +19,9 @@ function init(){
                 //console.log('működik');
                 startCalc();
         });
-        }   
+        }
+    
+        // checkInput(30);
 }
 
 function startCalc(){
@@ -35,7 +37,16 @@ function calcBodyIndex(weight, height){
 }
 
 // ezt is tesztelni kell...
-function checkInput(){
+function checkInput(input){
     let inputStr = String(input);
-    return inputStr.match(/^[0-9.]+$/); // regex = számokkal kezdődik, és pontot is tartalmazhat, BOOLEAN értéket ad vissza a .match    
+    let inputNum = Number(input);
+    if(inputStr.match(/^[0-9.]+$/)) { // regex = számokkal kezdődik, és pontot is tartalmazhat, BOOLEAN értéket ad vissza a .match        
+        if(inputNum >0) {
+            return true;
+        } else {
+        return false;
+        }  
+    } else {
+        return false;
+    }
 }
