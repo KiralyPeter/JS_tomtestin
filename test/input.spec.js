@@ -1,6 +1,6 @@
 
 describe('Input tesztelése', ()=> { //x-el ki lehet zárni a tesztet..
-    xit('Szám', ()=> {
+    it('Szám', ()=> {
         let actual = checkInput(30);
         expect(actual).toBe(true);
     });
@@ -8,7 +8,7 @@ describe('Input tesztelése', ()=> { //x-el ki lehet zárni a tesztet..
         let actual = checkInput('aaa');
         expect(actual).toBe(false);
     });
-    xit('0 input', ()=> {
+    it('0 input', ()=> {
         let actual = checkInput(0);
         expect(actual).toBe(false);
     });
